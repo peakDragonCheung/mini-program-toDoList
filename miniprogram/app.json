@@ -1,0 +1,27 @@
+{
+  "pages":[
+    "pages/day/day",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/day/edit"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "backgroundColor": "#cccccc",
+    "navigationBarBackgroundColor": "#f4d03f",
+    "navigationBarTitleText": "toDoList",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/day/day",
+        "text": "每日toDo"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "能力toDo"
+      }
+    ]
+  }
+}

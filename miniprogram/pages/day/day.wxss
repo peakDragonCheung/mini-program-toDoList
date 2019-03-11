@@ -1,0 +1,42 @@
+.day-content{
+  height: 100%;
+  padding: 5px;
+}
+.day-item{
+  height: 150rpx;
+  width: 90%;
+  background: transparent;
+  margin: 0 auto;
+  margin-bottom: 40rpx;
+  padding: 5px;
+  border: 1rpx solid black;
+  box-shadow: 2px 2px 5px black;
+  }
+  .fly-button{
+    position: fixed;
+    z-index: 100;
+    top: 80%;
+    right: 10%;
+    background: #f4d03f;
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 45rpx;
+    color: white;
+    line-height: 110rpx;
+    box-shadow: 2px 1.5px 1px #cccccc;
+    /* animation-name: skw;
+    animation-duration: 2s;
+    animation-iteration-count: infinite; */
+  }
+  @keyframes skw{
+    0%{
+      transform: scale(1);
+      opacity: 0.5;
+    }
+    100%{
+      transform: scale(1.5);
+      opacity: 1;
+    }
+  }

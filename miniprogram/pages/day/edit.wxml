@@ -1,0 +1,17 @@
+<view class="container">
+  <input placeholder="请输入标题" bindinput="setTitle" auto-focus class='myInput titleInput' />
+  <picker class='myInput' bindchange="setListTime" value="{{index}}" range="{{timeArray}}">
+    <view class="picker">
+      <text class='mypicker'>选择时间</text>:
+      <text class='mytext'>{{timeArray[index]}} 分钟 </text>
+    </view>
+  </picker>
+  <view class="myInput">
+    <textarea bindinput="setDolistDescr" auto-height placeholder="请输入dolist描述" />
+  </view>
+  <view class="myInput">
+    <button size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="addTodoList" class='myButton'>
+      保存
+    </button>
+  </view>
+</view>
