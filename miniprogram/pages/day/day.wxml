@@ -16,7 +16,7 @@
     class="day-content"
   > 
  <view class="day-item" wx:for="{{doList}}" wx:key="{{item.text}}">
-  <text>{{item.text}}</text>
+  <text>{{item.toDolistTitle}}</text>
  </view>
   </scroll-view>
 </view>

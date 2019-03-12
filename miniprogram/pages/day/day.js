@@ -1,3 +1,4 @@
+const app = getApp()
 Page({
 
   /**
@@ -32,14 +33,23 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    wx.cloud.init();
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+    const db = wx.cloud.database();
+    db.collection('todoList').where({
+      _openid: app.globalData.appid // 填入当前用户 openid
+    }).get().then(res => {
+      if(res.data) {
+        this.setData({
+          doList: res.data
+        })
+      }
+    })
   },
 
   /**

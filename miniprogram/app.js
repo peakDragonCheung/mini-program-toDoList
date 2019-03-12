@@ -32,8 +32,21 @@ App({
         }
       }
     })
+    wx.cloud.init();
+    wx.cloud.callFunction({
+      name: 'login',
+      data:{
+      }
+    }).then(res => {
+      if(res.result) {
+        this.globalData.appid = res.result.appid;
+        this.globalData.openid = res.result.openid;
+      }
+    })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    appid: '',
+    openid: ''
   }
 })
